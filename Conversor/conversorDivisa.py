@@ -1,5 +1,5 @@
 
-
+import msvcrt
 import re
 import string
 import requests
@@ -22,3 +22,4 @@ found = result[205:215]
 print("Cantidad en dolares: $",found)
 
 
+msvcrt.getch()
