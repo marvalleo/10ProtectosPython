@@ -1,5 +1,11 @@
 
+<<<<<<< HEAD
 import json
+=======
+import msvcrt
+import re
+import string
+>>>>>>> 840895b5b7ba8dc39f9b397cb8f4ffbf6b880d74
 import requests
 
 # monto = input("Introduce el monto CLP -> USD: ")
@@ -23,3 +29,4 @@ found = result[205:215]
 print("Cantidad en dolares 1: $",found)
 print("Cantidad en dolares 2: $",data['result'])
 
+msvcrt.getch()
