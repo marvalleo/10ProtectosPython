@@ -1,5 +1,4 @@
 import json
-from turtle import delay
 import requests
 import msvcrt
 
