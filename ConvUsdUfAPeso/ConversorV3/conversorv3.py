@@ -13,7 +13,7 @@ dolarUrl = 'https://api.cmfchile.cl/api-sbifv3/recursos_api/dolar/?apikey=ed9a56
 dolarResponse = requests.get(dolarUrl)
 if dolarResponse.status_code == 200:
     dolarData = json.loads(dolarResponse.text.encode("utf-8"))
-    dolarRespuesta = dolarData['Dolares'][0]['Valor']
+    dolarRespuesta = dolarData['Dolares'][0]['Valor']    
 else:
     url = "https://api.apilayer.com/currency_data/convert?to=CLP&from=USD&amount=1"
     payload = {}
@@ -31,6 +31,13 @@ pretty_json2 = json.dumps(dolarData, indent=2)
 
 print('Valor UF: $',ufRespuesta)
 print('Valor Dolar: $',dolarRespuesta)
+print('\n---------------------------------------------\n')
 
+monto= int(input('Ingresa el monto que deseas convertir: $'))
+ufRespuesta= ufRespuesta.replace(".","").replace(",",".")
+uf=float(ufRespuesta)
+
+print('Monto UF en pesos: $',uf*monto)
+print('Monto USD en pesos: $',dolarRespuesta*monto)
 
 msvcrt.getch()

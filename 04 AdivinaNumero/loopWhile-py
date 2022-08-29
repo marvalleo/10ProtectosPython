@@ -1,0 +1,56 @@
+monedas=5
+while monedas>0:
+    print(f"tengo {monedas} monedas")
+    monedas -= 1 #monedas = monedas -1
+else:
+    print("no tengo mas dinero")
+
+print("\n-----------------------------------\n")
+
+respuesta='s'
+while respuesta == 's':
+    respuesta = input ("quieres seguir? (s/n)")
+else:
+    print("gracias")
+
+print("\n-----------------------------------\n")
+
+respuesta='s'
+while respuesta == 's':
+    pass #pasa sin obligar a que el while haga algo
+print('constinuar con otra parte de codigo')
+
+print("\n-----------------------------------\n")
+#imprimirá el nombre mientras no aparesca una letra r
+#si aparece la letra r el loop se detendrá
+nombre = input("Tu nombre: ")
+for letra in nombre:
+    if letra == "r":
+        break
+    print(letra)  
+
+print("\n-----------------------------------\n")
+
+#imprimirá el nombre mientras no aparesca una letra r
+#si aparece la letra r el loop continuará pero no imprimira la letra r
+nombre = input("Tu nombre: ")
+for letra in nombre:
+    if letra == "r":
+        continue
+    print(letra) 
+
+numero = 50
+while numero>= 0:
+    if numero%5==0:
+        print(numero)
+        numero-=1
+    else:
+        numero-=1
+
+
+lista_numeros = [4,5,8,7,6,9,8,2,4,5,7,1,9,5,6,-1,-5,6,-6,-4,-3]
+for numero in lista_numeros:
+    if numero >=0:
+        print(numero)
+    else:
+        break
